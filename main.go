@@ -1,5 +1,6 @@
 /*
-Copyright © 2026 NAME HERE <EMAIL ADDRESS>
+Copyright © 2026  Joshimore <https://github.com/Joshimore/AlwaysDO_app>
+
 
 */
 package main

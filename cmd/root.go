@@ -1,5 +1,5 @@
 /*
-Copyright © 2026 NAME HERE <EMAIL ADDRESS>
+Copyright © 2026 Joshimore <https://github.com/Joshimore/AlwaysDO_app>
 
 */
 package cmd
@@ -17,10 +17,10 @@ var rootCmd = &cobra.Command{
 	Use:   "alwaysdo",
 	Short: "A super cool, cozy, interesting TODO manager for your terminal",
 	Long: `AlwaysDo is a lightweight and super useful command-line TODO aplication
-	built with GO and Cobra.
+built with GO and Cobra.
 
-	It allows you to manilulate your tasks. Create, add, list, complete 
-	without leaving your terminal.`,
+It allows you to manilulate your tasks. Create, add, list, complete 
+without leaving your terminal.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
