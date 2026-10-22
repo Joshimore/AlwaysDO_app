@@ -26,6 +26,8 @@ var addCmd = &cobra.Command{
 		}*/
 
 		fmt.Println("Task received: ", args[0])
+
+
 	},
 
 	Args: cobra.ExactArgs(1),
