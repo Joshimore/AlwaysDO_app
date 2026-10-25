@@ -5,12 +5,12 @@ import (
 	"time"
 )
 
-func NewTask(id int, title, category string) Task{
+func NewTask(id int, title, category string) Task {
 
 	task := Task{
-		ID: id, 
-		Title: title, 
-		Category: category,
+		ID:        id,
+		Title:     title,
+		Category:  category,
 		CreatedAt: time.Now(),
 	}
 
@@ -18,18 +18,20 @@ func NewTask(id int, title, category string) Task{
 
 }
 
-func NextID(task []Task) int{
+func NextID(tasks []Task) int {
 
 	maxID := 0
-	
-	for i := 0; i < len(task); i++{
-		fmt.Println(task[i].ID)
 
-		if task[i].ID > maxID{
-			maxID = task[i].ID;
-		}	
+	for i := 0; i < len(tasks); i++ {
+		fmt.Println(tasks[i].ID)
+
+		if tasks[i].ID > maxID {
+			maxID = tasks[i].ID
+		}
 	}
-	
+
 	return maxID + 1
 
 }
+
+//func FindTask(tasks []Task, id int) (int, bool){}
