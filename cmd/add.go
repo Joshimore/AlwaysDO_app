@@ -1,6 +1,5 @@
 /*
 Copyright © 2026 Joshimore <https://github.com/Joshimore/AlwaysDO_app>
-
 */
 package cmd
 
@@ -27,12 +26,10 @@ var addCmd = &cobra.Command{
 
 		fmt.Println("Task received: ", args[0])
 
-
 	},
 
 	Args: cobra.ExactArgs(1),
 }
-
 
 func init() {
 	rootCmd.AddCommand(addCmd)
