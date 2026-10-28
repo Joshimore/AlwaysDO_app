@@ -5,7 +5,8 @@ package cmd
 
 import (
 	"fmt"
-
+	"alwaysdo/internal/storage"
+	"alwaysdo/internal/todo"
 	"github.com/spf13/cobra"
 )
 
@@ -15,16 +16,20 @@ var addCmd = &cobra.Command{
 	Short: "A command to add a task to the list",
 
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("add called")
+		path := "tasks.json"
 
-		/* Validate priority
-		validPriorities := map[string]bool{"high": true, "medium": true, "low": true}
-		if !validPriorities[priority] {
-			fmt.Printf("Invalid priority '%s'. Use: high, medium, or low\n", priority)
-			os.Exit(1)
-		}*/
+		tasks, err := storage.LoadTasks(path)
 
-		fmt.Println("Task received: ", args[0])
+		if err != nil{
+			fmt.Println(cmd.ErrOrStderr(), "Error loading tasks:", err)
+			return
+		}
+
+		fmt.Println("Existing tasks:", len(tasks))
+
+		id := todo.NextID(tasks)
+
+		newTask := todo.NewTask(id, args[0], "general")	
 
 	},
 
